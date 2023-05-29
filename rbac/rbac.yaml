@@ -23,10 +23,10 @@ metadata:
   namespace: prasanth-roboshop
 subjects:
 - kind: User
-  name: roboshop-admin 
+  name: roboshop-admin
   apiGroup: rbac.authorization.k8s.io
 roleRef:
-  kind: Role 
+  kind: Role
   name: roboshop-admin-role
   apiGroup: rbac.authorization.k8s.io
 ---
@@ -44,8 +44,8 @@ kind: ClusterRoleBinding
 metadata:
   name: cluster-reader-role-binding
 subjects:
-- kind: user
-  name: roboshop-admin 
+- kind: User
+  name: roboshop-admin
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
